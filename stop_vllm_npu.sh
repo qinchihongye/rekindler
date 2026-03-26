@@ -15,7 +15,7 @@ VLLM_PID=$(ps -ef | grep 'vllm.entrypoints.api_server' | grep -v grep | awk '{pr
 if [ -z "$VLLM_PID" ]; then
     echo "未找到 vLLM 推理服务。"
 else
-    python3 -c "from vllm.utils import kill_process_tree; kill_process_tree($VLLM_PID)" 2>/dev/null || kill -9 $VLLM_PID
+    python3 -c "from vllm.utils.system_utils import kill_process_tree; kill_process_tree($VLLM_PID)" 2>/dev/null || kill -9 $VLLM_PID
     echo "vLLM 推理服务已停止 (PID: $VLLM_PID)"
 fi
 
