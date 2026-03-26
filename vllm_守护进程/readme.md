@@ -66,7 +66,7 @@
   tail -f log/nohup_vllm.log
   ```
 
-* 查看mindie启动日志
+* 查看 vllm 启动日志
 
   ```shell
   tail -f log/vllm_service_2025_0626_1642.log
