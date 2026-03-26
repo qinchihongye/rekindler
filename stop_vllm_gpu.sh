@@ -15,6 +15,7 @@ VLLM_PID=$(ps -ef | grep 'vllm serve' | grep -v grep | awk '{print $2}')
 if [ -z "$VLLM_PID" ]; then
     echo "未找到 vLLM 推理服务。"
 else
+    # 注意：老版本 vllm 使用 from vllm.utils import kill_process_tree
     python3 -c "from vllm.utils.system_utils import kill_process_tree; kill_process_tree($VLLM_PID)" 2>/dev/null || kill -9 $VLLM_PID
     echo "vLLM 推理服务已停止 (PID: $VLLM_PID)"
 fi
