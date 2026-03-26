@@ -1,0 +1,70 @@
+/mnt/workspace/vllm/vllm_listen.py:37: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+  @validator('log_dir', pre=True, always=True)
+2025-m26% 16:42:49 - INFO - __main__ - ****************************************************************************************************
+2025-m26% 16:42:49 - INFO - __main__ - **************************************************
+2025-m26% 16:42:49 - INFO - __main__ - Starting VLLM listener with configuration:
+2025-m26% 16:42:49 - INFO - __main__ -   - Service name:       vllm
+2025-m26% 16:42:49 - INFO - __main__ -   - Port:               8081
+2025-m26% 16:42:49 - INFO - __main__ -   - Listening port:     8083
+2025-m26% 16:42:49 - INFO - __main__ -   - Work directory:     /mnt/workspace/vllm
+2025-m26% 16:42:49 - INFO - __main__ -   - Log directory:      /mnt/workspace/vllm/log
+2025-m26% 16:42:49 - INFO - __main__ -   - Check interval:     30.0 seconds
+2025-m26% 16:42:49 - INFO - __main__ -   - startup_wait_time:  60.0
+2025-m26% 16:42:49 - INFO - __main__ -   - sh_file:            vllm_start.sh
+2025-m26% 16:42:49 - INFO - __main__ -   - memory_threshold:   300
+2025-m26% 16:42:49 - INFO - __main__ -   - num_threshold:      0.5
+2025-m26% 16:42:49 - INFO - __main__ -   - Startup script:   
+vllm_start.sh
+2025-m26% 16:42:49 - INFO - __main__ - **************************************************
+2025-m26% 16:42:49 - INFO - __main__ - Starting periodic health check for vllm on port 8081
+2025-m26% 16:42:49 - INFO - __main__ - Starting FastAPI application with Uvicorn...
+2025-m26% 16:42:49 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa356a16fd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO:     Started server process [61162]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
+2025-m26% 16:42:49 - WARNING - __main__ - Service vllm is not healthy, attempting to restart
+2025-m26% 16:42:49 - INFO - __main__ - **************************************************
+2025-m26% 16:42:49 - INFO - __main__ - Restarting service: vllm
+2025-m26% 16:42:49 - INFO - __main__ - Service vllm is restarting...,please wait at least 60.0 seconds!!!!!!
+2025-m26% 16:43:49 - INFO - __main__ - Service vllm restart command executed
+2025-m26% 16:44:19 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa355f3ed90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-m26% 16:44:19 - INFO - __main__ - Service vllm is not healthy, but GPU is occupied, not restart
+2025-m26% 16:44:19 - INFO - __main__ - Please wait for the GPU to be released,or for the next health check in 30.0 seconds
+2025-m26% 16:44:50 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:45:20 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:45:50 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa355f611d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-m26% 16:45:50 - WARNING - __main__ - Service vllm is not healthy, attempting to restart
+2025-m26% 16:45:50 - INFO - __main__ - **************************************************
+2025-m26% 16:45:50 - INFO - __main__ - Restarting service: vllm
+2025-m26% 16:45:50 - INFO - __main__ - Service vllm is restarting...,please wait at least 60.0 seconds!!!!!!
+2025-m26% 16:46:50 - INFO - __main__ - Service vllm restart command executed
+2025-m26% 16:47:20 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa355f63010>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-m26% 16:47:20 - INFO - __main__ - Service vllm is not healthy, but GPU is occupied, not restart
+2025-m26% 16:47:20 - INFO - __main__ - Please wait for the GPU to be released,or for the next health check in 30.0 seconds
+2025-m26% 16:47:50 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:48:20 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:48:51 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:49:21 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:49:51 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:50:21 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:50:51 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa355f60e10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-m26% 16:50:51 - WARNING - __main__ - Service vllm is not healthy, attempting to restart
+2025-m26% 16:50:51 - INFO - __main__ - **************************************************
+2025-m26% 16:50:51 - INFO - __main__ - Restarting service: vllm
+2025-m26% 16:50:51 - INFO - __main__ - Service vllm is restarting...,please wait at least 60.0 seconds!!!!!!
+2025-m26% 16:51:51 - INFO - __main__ - Service vllm restart command executed
+2025-m26% 16:52:21 - ERROR - __main__ - Health check failed: HTTPConnectionPool(host='localhost', port=8081): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fa355f4d0d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-m26% 16:52:21 - INFO - __main__ - Service vllm is not healthy, but GPU is occupied, not restart
+2025-m26% 16:52:21 - INFO - __main__ - Please wait for the GPU to be released,or for the next health check in 30.0 seconds
+2025-m26% 16:52:51 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:53:22 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:53:52 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:54:22 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:54:52 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:55:22 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:55:53 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:56:23 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:56:53 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:57:23 - INFO - __main__ - Service vllm is healthy
+2025-m26% 16:57:53 - INFO - __main__ - Service vllm is healthy
