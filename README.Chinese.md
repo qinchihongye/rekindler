@@ -1,5 +1,7 @@
 # Rekindler 🔥
 
+[English](README.md) | [中文](README.Chinese.md)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)](https://python.org)
 [![vLLM](https://img.shields.io/badge/vLLM-supported-orange.svg)](https://github.com/vllm-project/vllm)
